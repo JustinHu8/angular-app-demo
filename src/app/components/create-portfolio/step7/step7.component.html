@@ -1,0 +1,60 @@
+<div class="mobile-layout">
+  <div class="container header">
+    <div class="row">
+      <div class="col col-xs-3 col-sm-3 col-md-3">
+        <button mat-button routerLink="/step6" routerLinkActive="active" class="back-btn"><mat-icon class="back-btn-icon">arrow_back</mat-icon></button>
+      </div>
+      <div class="col col-xs-6 col-sm-6 col-md-6">
+        <h6>Create my portfolio</h6>
+      </div>
+      <div class="col col-xs-3 col-sm-3 col-md-3">
+        <!-- <mat-icon>arrow_forward</mat-icon> -->
+      </div>
+    </div>
+  </div>
+  <div class="container content">
+    <div class="row">
+      <mat-progress-bar mode="determinate" value="70"></mat-progress-bar>
+    </div>
+    <div class="row padding-top-20">
+      <div class="col col-xs-12">
+      <mat-card class="example-card" (click)="chooseCategory('stocks')">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"><mat-icon>picture_in_picture</mat-icon></div>
+          <mat-card-title>INDEX FUNDS</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>
+            Unsure and looking for diversity? Choose to invest in top ASX index funds for greater diversification
+          </p>
+        </mat-card-content>
+      </mat-card>
+      </div>
+    </div>
+    <div class="row padding-top-20">
+      <div class="col col-xs-12">
+      <mat-card class="example-card" (click)="chooseCategory('stocks')">
+          <mat-card-header>
+            <mat-checkbox></mat-checkbox>
+            <div mat-card-avatar class="example-header-image"><mat-icon>picture_in_picture</mat-icon></div>
+            <mat-card-title>STOCKS</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <p>
+              Choose your area of interest and invest in top 200 ASX companies to achieve market normalised returns.
+            </p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+    <div class="row padding-top-20">
+        <mat-checkbox>I confirm my choice of portfolio</mat-checkbox>
+    </div>
+  </div>
+  <!-- <div class="container footer">
+    <div class="row float-right">
+        <button mat-button routerLink="/step7" routerLinkActive="active">Next <mat-icon>arrow_forward</mat-icon></button>
+    </div>
+  </div> -->
+</div>
+

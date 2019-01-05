@@ -1,0 +1,49 @@
+<div class="container header">
+  <h1>Track Savings</h1>
+  <p>Monitor your home loan deposit progress</p>
+</div>
+<div class="container content">
+  <div class="row button-toggle-group">
+    <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+      <mat-button-toggle value="overview" [checked]=true routerLink="/dash-board/track-savings/overview">OVERVIEW</mat-button-toggle>
+      <mat-button-toggle value="progress" routerLink="/dash-board/track-savings/progress">PROGRESS</mat-button-toggle>
+      <mat-button-toggle value="top-up"  routerLink="/dash-board/track-savings/top-up">TOP-UP</mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
+  <div class="row padding-top-10">
+    <div style="display: block;margin:auto;margin-bottom:20px">
+        <canvas mdbChart
+            [chartType]="chartType"
+            [data]="chartData"
+            [labels]="chartLabels"
+            [colors]="chartColors"
+            [options]="chartOptions"
+            [legend]="true"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)">
+        </canvas>
+    </div>
+    <div class="chart-text">
+      <p>SAVED</p>
+      <h2>$25,000</h2>
+      <p>OUT OF</p>
+      <h4>$125,000</h4>
+      <p>HOME DEPOSIT GOAL</p>
+    </div>
+
+    <button mat-stroked-button>EDIT GOAL</button>
+    <button mat-stroked-button>REINVEST</button>
+  </div>
+  <div class="row">
+    <h3>SAVING ACTIVITY</h3>
+    <table>
+      <tr *ngFor="let transaction of filteredTransactions">
+        <td>
+          <p>{{ transaction.date }}</p>
+          <p>{{ transaction.description }}</p>
+        </td>
+        <td class="float-right">{{ transaction.amount }}</td>
+      </tr>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+<div class="mobile-layout">
+  <div class="container header">
+    <div class="row">
+      <div class="col col-xs-4">
+        <button mat-button routerLink="/sign-up" routerLinkActive="active" class="back-btn"><mat-icon class="back-btn-icon">arrow_back</mat-icon></button>
+      </div>
+      <div class="col col-xs-4">
+          <div class="hsbc-logo"></div>
+      </div>
+      <div class="col col-xs-4">
+        <!-- <mat-icon>arrow_forward</mat-icon> -->
+      </div>
+    </div>
+  </div>
+  <div class="container content">
+    <div class="row">
+      <div class="col col-xs-12">
+          <h1>Welcome back</h1>
+          <p>Please choose one login method</p>
+      </div>
+    </div>
+    <div class="row">
+      <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Username">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <textarea matInput placeholder="Password"></textarea>
+        </mat-form-field>
+
+        </form>
+    </div>
+  </div>
+  <div class="container footer">
+    <div class="row float-right">
+        <button mat-button routerLink="/dash-board/track-savings/overview" routerLinkActive="active">Next <mat-icon>arrow_forward</mat-icon></button>
+    </div>
+  </div>
+</div>

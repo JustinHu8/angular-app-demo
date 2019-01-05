@@ -1,0 +1,32 @@
+<div class="container header">
+  <h1>Track Savings</h1>
+  <p>Monitor your home loan deposit progress</p>
+</div>
+<div class="container content">
+  <div class="row">
+      <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+        <mat-button-toggle value="overview" routerLink="/dash-board/track-savings/overview">OVERVIEW</mat-button-toggle>
+        <mat-button-toggle value="progress" routerLink="/dash-board/track-savings/progress">PROGRESS</mat-button-toggle>
+        <mat-button-toggle value="top-up" [checked]=true routerLink="/dash-board/track-savings/top-up">TOP-UP</mat-button-toggle>
+      </mat-button-toggle-group>
+  </div>
+  <div class="row padding-top-20">
+    <h3>How much do you want to top-up?</h3>
+  </div>
+  <div class="row">
+    <mat-slider
+    class="example-margin"
+    [disabled]="disabled"
+    [invert]="invert"
+    [max]="max"
+    [min]="min"
+    [step]="step"
+    [value]="value"
+    [thumbLabel]="thumbLabel"
+    [vertical]="vertical">
+    </mat-slider>
+  </div>
+  <div class="row padding-top-20">
+    <button mat-stroked-button>CONFIRM</button>
+  </div>
+</div>

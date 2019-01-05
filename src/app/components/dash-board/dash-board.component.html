@@ -1,0 +1,26 @@
+<div class="mobile-layout dash-board">
+  <div [@routeAnimations]="prepareRoute(outlet)">
+    <router-outlet #outlet="outlet"></router-outlet>
+  </div>
+  <div class="container footer fixed-bottom">
+    <div class="row">
+      <div class="col col-xs-3" routerLink="/dash-board/market-news" routerLinkActive="active">
+        <mat-icon>language</mat-icon>
+        <p class="small">Market News</p>
+      </div>
+      <div class="col col-xs-3" routerLink="/dash-board/portfolio">
+        <mat-icon>donut_small</mat-icon>
+        <p class="small">Portfolio</p>
+      </div>
+      <div class="col col-xs-3" routerLink="/dash-board/track-savings/overview">
+        <mat-icon>account_balance</mat-icon>
+        <p class="small">Track Savings</p>
+      </div>
+      <div class="col col-xs-3" routerLink="/dash-board/profile" routerLinkActive="active">
+        <mat-icon>face</mat-icon>
+        <p class="small">Profile</p>
+      </div>
+    </div>
+  </div>
+</div>
+

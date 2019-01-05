@@ -1,0 +1,60 @@
+<div class="mobile-layout">
+    <div class="container header">
+      <div class="row">
+        <div class="col col-xs-4">
+          <button mat-button routerLink="/step1" routerLinkActive="active" class="back-btn"><mat-icon class="back-btn-icon">arrow_back</mat-icon></button>
+        </div>
+        <div class="col col-xs-4">
+            <mat-icon style="font-size:50px;">chrome_reader_mode</mat-icon>
+        </div>
+        <div class="col col-xs-4">
+          <!-- <mat-icon>arrow_forward</mat-icon> -->
+        </div>
+      </div>
+    </div>
+    <div class="container content">
+      <div class="row">
+        <mat-progress-bar mode="determinate" value="20"></mat-progress-bar>
+      </div>
+      <div class="row padding-top-20">
+        <div class="col col-xs-12">
+          <h1>Just a few details from you to get started</h1>
+          <p>We need to verify your identity. Select a form of ID</p>
+        </div>
+      </div>
+      <div class="row">
+        <form class="example-form">
+          <mat-form-field class="example-full-width">
+            <!-- <input matInput placeholder="Driver's licence"> -->
+            <mat-select placeholder="Driver's licence" [(value)]="selectedID">
+                <mat-option *ngFor="let id of ids" [value]="id.value">
+                  {{id.viewValue}}
+                </mat-option>
+              </mat-select>
+          </mat-form-field>
+
+          <mat-form-field *ngIf="selectedID === 'licence'" class="example-full-width">
+            <textarea matInput placeholder="Driver's licence number"></textarea>
+          </mat-form-field>
+
+          <mat-form-field *ngIf="selectedID === 'passport'" class="example-full-width">
+            <textarea matInput placeholder="Passport number"></textarea>
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <mat-select placeholder="State" [(value)]="selectedState">
+                <mat-option *ngFor="let state of states" [value]="state.value">
+                  {{state.viewValue}}
+                </mat-option>
+              </mat-select>
+          </mat-form-field>
+
+          </form>
+      </div>
+    </div>
+    <div class="container footer">
+      <div class="row float-right">
+          <button mat-button routerLink="/step3" routerLinkActive="active">Next <mat-icon>arrow_forward</mat-icon></button>
+      </div>
+    </div>
+  </div>

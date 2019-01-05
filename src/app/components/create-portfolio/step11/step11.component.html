@@ -1,0 +1,72 @@
+<div class="mobile-layout">
+  <div class="container header">
+    <div class="row">
+      <div class="col col-xs-3 col-sm-3 col-md-3">
+        <button mat-button routerLink="/step10" routerLinkActive="active" class="back-btn"><mat-icon class="back-btn-icon">arrow_back</mat-icon></button>
+      </div>
+      <div class="col col-xs-6 col-sm-6 col-md-6">
+        <h6>Create my portfolio</h6>
+      </div>
+      <div class="col col-xs-3 col-sm-3 col-md-3">
+        <!-- <mat-icon>arrow_forward</mat-icon> -->
+      </div>
+    </div>
+  </div>
+  <div class="container content">
+    <div class="row">
+      <mat-progress-bar mode="determinate" value="85"></mat-progress-bar>
+    </div>
+    <div class="row padding-top-20">
+      <h1>Would you like help to invest more?</h1>
+      <p>We can lend you between $1,000 to $6000 as a top-up for this investment</p>
+    </div>
+    <div class="row">
+        <form class="example-form">
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Amount $">
+          </mat-form-field>
+        </form>
+    </div>
+    <div class="row>">
+      <table>
+        <tr>
+          <td>WEEKLY MIN. REPAYMENT:</td>
+          <td>$2.30</td>
+        </tr>
+        <tr>
+          <td>LOAN TERM:</td>
+          <td>1 YEAR</td>
+        </tr>
+        <tr>
+          <td>INTERST RATE:</td>
+          <td>4.00%</td>
+        </tr>
+        <tr>
+          <td>TOTAL INTEREST PAYABLE:</td>
+          <td>$120.00</td>
+        </tr>
+      </table>
+      <p>There is no early repayment fees if the loan was fully paid back after 3 months.</p>
+    </div>
+    <div class="row">
+      <p>When can you repay the borrowed top-up?</p>
+    </div>
+    <div class="row">
+        <form class="example-form">
+            <mat-form-field class="example-full-width">
+              <!-- <input matInput placeholder="Driver's licence"> -->
+              <mat-select placeholder="Repayment Period" [(value)]="selectedID">
+                  <mat-option *ngFor="let repaymentPeriod of repaymentPeriods" [value]="repaymentPeriod.value">
+                    {{repaymentPeriod.viewValue}}
+                  </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </form>
+    </div>
+  </div>
+  <div class="container footer">
+    <div class="row float-right">
+        <button mat-button routerLink="/step12" routerLinkActive="active">Next <mat-icon>arrow_forward</mat-icon></button>
+    </div>
+  </div>
+</div>

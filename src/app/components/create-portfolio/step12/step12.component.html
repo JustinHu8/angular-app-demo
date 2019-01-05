@@ -1,0 +1,57 @@
+<div class="mobile-layout">
+  <div class="container header">
+    <div class="row">
+      <div class="col col-xs-3 col-sm-3 col-md-3">
+        <button mat-button routerLink="/step11" routerLinkActive="active" class="back-btn"><mat-icon class="back-btn-icon">arrow_back</mat-icon></button>
+      </div>
+      <div class="col col-xs-6 col-sm-6 col-md-6">
+        <h6>Create my portfolio</h6>
+      </div>
+      <div class="col col-xs-3 col-sm-3 col-md-3">
+        <!-- <mat-icon>arrow_forward</mat-icon> -->
+      </div>
+    </div>
+  </div>
+  <div class="container content">
+    <div class="row">
+      <mat-progress-bar mode="determinate" value="90"></mat-progress-bar>
+    </div>
+    <div class="row padding-top-20">
+      <h1>Choose the account you would like to use as your funding account</h1>
+      <p>We will direct debit from this account to invest in your chosen portfolio. Your Smashed Avo Fund Top-up Loan repayment will also be paid through this account.</p>
+    </div>
+    <div class="row">
+      <div class="logo col col-xs-3">
+        <div class="img-cba {{selectedCba ? 'selected' : ''}}" (click)="chooseBank('cba')"></div>
+      </div>
+      <div class="logo col col-xs-3">
+          <div class="img-anz {{selectedAnz ? 'selected' : ''}}" (click)="chooseBank('anz')"></div>
+      </div>
+      <div class="logo col col-xs-3">
+          <div class="img-westpac {{selectedWestpac ? 'selected' : ''}}" (click)="chooseBank('westpac')"></div>
+      </div>
+      <div class="logo col col-xs-3">
+          <div class="img-nab  {{selectedNab ? 'selected' : ''}}" (click)="chooseBank('nab')"></div>
+      </div>
+    </div>
+    <div class="logo row padding-top-20">
+      <div class="col col-xs-3">
+          <div class=" img-hsbc {{selectedHsbc ? 'selected' : ''}}" (click)="chooseBank('hsbc')"></div>
+      </div>
+      <div class="col col-xs-3">
+          <!-- <div class="img-nab"></div> -->
+      </div>
+      <div class="col col-xs-3">
+          <!-- <div class="img-hsbc"></div> -->
+      </div>
+      <div class="col col-xs-3">
+          <!-- <div class="img-nab"></div> -->
+      </div>
+    </div>
+  </div>
+  <div class="container footer">
+    <div class="row float-right">
+        <button mat-button routerLink="/step13" routerLinkActive="active">Next <mat-icon>arrow_forward</mat-icon></button>
+    </div>
+  </div>
+</div>

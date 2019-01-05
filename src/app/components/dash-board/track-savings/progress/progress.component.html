@@ -1,0 +1,47 @@
+<div class="container header">
+  <h1>Track Savings</h1>
+  <p>Monitor your home loan deposit progress</p>
+</div>
+<div class="container content">
+  <div class="row">
+      <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+        <mat-button-toggle value="overview" routerLink="/dash-board/track-savings/overview">OVERVIEW</mat-button-toggle>
+        <mat-button-toggle value="progress" [checked]=true routerLink="/dash-board/track-savings/progress">PROGRESS</mat-button-toggle>
+        <mat-button-toggle value="top-up"  routerLink="/dash-board/track-savings/top-up">TOP-UP</mat-button-toggle>
+      </mat-button-toggle-group>
+
+      <div style="display: block;margin:auto;margin-top:20px">
+          <canvas mdbChart height="280"
+              [chartType]="chartType"
+              [data]="chartData"
+              [labels]="chartLabels"
+              [colors]="chartColors"
+              [options]="chartOptions"
+              [legend]="true"
+              (chartHover)="chartHovered($event)"
+              (chartClick)="chartClicked($event)">
+          </canvas>
+      </div>
+
+  </div>
+  <div class="row padding-top-20">
+    <h3>Switch your savings account with HSBC and earn to earn 3.10% p.a</h3>
+  </div>
+  <div class="row padding-top-20 product-recommendations">
+    <div class="col col-xs-4">
+      <h4>$12,000</h4>
+      <div class="img-toast"></div>
+      <p>Normal regular savings</p>
+    </div>
+    <div class="col col-xs-4">
+      <h4>$12,960</h4>
+      <div class="img-toastwavocado"></div>
+      <p>Savings with smashed avo fund</p>
+    </div>
+    <div class="col col-xs-4">
+      <h4>$13,146</h4>
+      <div class="img-toastwavocadoegg"></div>
+      <p>Savings with smashed avo fund + HSBC Savings Account</p>
+    </div>
+  </div>
+</div>

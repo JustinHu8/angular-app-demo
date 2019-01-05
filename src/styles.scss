@@ -1,0 +1,357 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+body {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+28,45484d+100 */
+  background: #000000; /* Old browsers */
+  background: -moz-linear-gradient(top, #000000 28%, #45484d 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #000000 28%,#45484d 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #000000 28%,#45484d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#45484d',GradientType=0 ); /* IE6-9 */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  color: #FFFFFF;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+.padding-top-20 {
+  padding-top: 20px;
+}
+
+.footer {
+  // position: absolute;
+  // bottom: 0;
+  // width: 100%;
+  // height: 30px;
+}
+
+.mobile-layout {
+  // background: url('./assets/img/bg_dark.jpg') center center;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  opacity: 0.8;
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-label {
+  color: #FFFFFF;
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-underline {
+  background-color: #FFFFFF;
+}
+
+.mat-slider-horizontal {
+  width: 100%;
+}
+
+.mat-slider-ticks {
+  opacity: 0.4!important;
+  background: #FFFFFF;
+}
+
+.mat-checkbox-frame {
+  border-color: #FFFFFF;
+}
+
+.mat-form-field.mat-focused {
+  .mat-form-field-label {
+    color: #ef241c;
+  }
+
+  .mat-input-element {
+    caret-color: #ef241c;
+  }
+
+  .mat-form-field-underline .mat-form-field-ripple{ background: #ef241c; }
+}
+
+.mat-accent .mat-slider-thumb {
+  background-color: #ef241c;
+}
+
+.mat-accent .mat-slider-track-fill {
+  background-color: #ef241c;
+}
+
+.mat-accent .mat-slider-thumb-label {
+  background-color: #ef241c;
+}
+
+.mat-slider-thumb {
+  width: 30px!important;
+  height: 30px!important;
+  right: -15px!important;
+  bottom: -15px!important;
+}
+
+.mat-button-toggle-label-content {
+  color: #FFFFFF;
+}
+
+.mat-button-toggle-checked {
+  background-color: #ef241c;
+  color: #000000;
+}
+
+.mat-button-toggle-group {
+  height: 38px;
+}
+
+.mat-select-value {
+  color: #FFFFFF;
+}
+
+.mat-select-arrow {
+  color: #FFFFFF;
+}
+
+.mat-form-field.mat-focused.mat-primary .mat-select-arrow {
+  color: #ef241c;
+}
+
+.mat-button-toggle-group {
+  margin: auto;
+}
+.mat-button-toggle-label-content {
+  font-size: 12px;
+}
+
+.header {
+  padding-top: 30px;
+
+  .back-btn {
+    padding-left: 0;
+    text-align: left;
+    .back-btn-icon {
+      font-size: 35px;
+    }
+  }
+}
+
+.content {
+  padding: 40px;
+  padding-top: 20px;
+  min-height: 550px;
+  max-height: 700px;
+
+  button {
+    width: 100%;
+    border: 1px solid #FFFFFF;
+    margin-bottom: 10px;
+  }
+}
+
+.checkbox-content {
+  width: 90%;
+  padding-left: 10px;
+}
+
+.mat-checkbox-checked.mat-accent .mat-checkbox-background {
+  background-color: #ef241c;
+}
+
+table {
+  text-align: left;
+  width: 80%;
+  margin: auto;
+  padding-bottom: 20px;
+
+  td {
+    padding-right: 10px;
+  }
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.hsbc-logo {
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  background: url('./assets/img/hsbc_logo.png') center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.img-toast {
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  background: url('./assets/img/img-toast.png') center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.img-toastwavocado {
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  background: url('./assets/img/img-toastwavocado.png') center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.img-toastwavocadoegg {
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  background: url('./assets/img/img-toastwavocadoegg.png') center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.img-loading {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  background: url('./assets/img/loader-iphone8plus.gif') center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  background-color: #FFFFFF;
+  opacity: 0.9;
+}
+
+.img-anz {
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  background: url('./assets/img/ANZ.png') center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.img-cba {
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  background: url('./assets/img/CBA.png') center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.img-hsbc {
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  background: url('./assets/img/HSBC.png') center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.img-nab {
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  background: url('./assets/img/NAB.png') center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.img-westpac {
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  background: url('./assets/img/Westpac.png') center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.logo {
+  >div {
+    margin: auto;
+  }
+  .selected {
+    border: 4px solid #ef241c;
+  }
+  .hide {
+    display: none;
+  }
+}
+
+.investment-agreement-content {
+  background: white;
+  color: black;
+  padding: 10px;
+  max-height: 350px;
+  overflow: scroll;
+}
+
+.dash-board {
+  .header {
+    padding-top: 20px;
+  }
+  .footer {
+    height: 70px;
+    padding-bottom: 20px;
+    background-color: #45484d;
+
+    .row {
+      height: 100%;
+      display: flex;
+      align-items: center;
+
+      .col {
+        height: 40%;
+        vertical-align: middle;
+
+        .mat-icon {
+          margin: auto;
+        }
+        .small {
+          font-size: 60%;
+        }
+      }
+    }
+
+  }
+}
+
+.ngucarousel {
+  height: 80%!important;
+}
+
+.mat-progress-bar-buffer {
+  background-color: #FFFFFF;
+}
+
+.mat-progress-bar-fill::after {
+  background-color: #ef241c;
+}
+
+@media (min-width: 576px) {  }
+
+@media (max-width: 768) {
+  .mobile-layout {
+    background: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .mobile-layout {
+    max-width: 400px;
+    margin: auto;
+    margin-top: 80px;
+
+    .content {
+      min-height: 600px;
+    }
+  }
+}
+
+@media (min-width: 992px) { }
+
+@media (min-width: 1200px) {  }

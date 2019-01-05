@@ -1,0 +1,49 @@
+<div class="mobile-layout">
+    <div class="container header">
+      <div class="row">
+        <div class="col col-xs-4">
+          <button mat-button routerLink="/step3" routerLinkActive="active" class="back-btn"><mat-icon class="back-btn-icon">arrow_back</mat-icon></button>
+        </div>
+        <div class="col col-xs-4">
+            <mat-icon style="font-size:50px;">chrome_reader_mode</mat-icon>
+        </div>
+        <div class="col col-xs-4">
+          <!-- <mat-icon>arrow_forward</mat-icon> -->
+        </div>
+      </div>
+    </div>
+    <div class="container content">
+      <div class="row">
+        <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+      </div>
+      <div class="row padding-top-20">
+        <div class="col col-xs-12">
+          <div style="display: block; margin: auto; padding: 10px;">
+              <canvas mdbChart
+                  [chartType]="chartType"
+                  [data]="chartData"
+                  [labels]="chartLabels"
+                  [colors]="chartColors"
+                  [options]="chartOptions"
+                  [legend]="true"
+                  (chartHover)="chartHovered($event)"
+                  (chartClick)="chartClicked($event)">
+              </canvas>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-xs-12">
+            <p>You can afford to invest <br>$1,000 at this time</p>
+            <h3>DID YOU KNOW..</h3>
+            <p>Based on the information you've provided, we can also lend you up to $6,000 to top-up your capital if you need it later.</p>
+            <button mat-button routerLink="/step5" routerLinkActive="active">Create my portfolio</button>
+        </div>
+      </div>
+    </div>
+    <div class="container footer">
+      <div class="row float-right">
+
+      </div>
+    </div>
+  </div>

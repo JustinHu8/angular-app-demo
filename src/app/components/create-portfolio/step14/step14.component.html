@@ -1,0 +1,69 @@
+<div class="mobile-layout">
+  <div class="container header">
+    <div class="row">
+      <div class="col col-xs-3 col-sm-3 col-md-3">
+        <button mat-button routerLink="/step13" routerLinkActive="active" class="back-btn"><mat-icon class="back-btn-icon">arrow_back</mat-icon></button>
+      </div>
+      <div class="col col-xs-6 col-sm-6 col-md-6">
+        <h6>Create my portfolio</h6>
+      </div>
+      <div class="col col-xs-3 col-sm-3 col-md-3">
+        <!-- <mat-icon>arrow_forward</mat-icon> -->
+      </div>
+    </div>
+  </div>
+  <div class="container content">
+    <div class="row">
+      <mat-progress-bar mode="determinate" value="98"></mat-progress-bar>
+    </div>
+    <div class="row padding-top-20">
+      <h1>Investment Agreement</h1>
+    </div>
+    <div class="row investment-agreement-content padding-top-20">
+      <p>Duis dolor odio, facilisis rhoncus maximus porttitor, volutpat non libero. Morbi pulvinar maximus dolor sed cursus. Integer molestie turpis tellus, non consequat nisi ultrices id. Maecenas dictum suscipit libero, sit amet convallis elit iaculis sed</p>
+      <table>
+        <tr>
+          <td>WEEKLY MIN. REPAYMENT:</td>
+          <td>$2.30</td>
+        </tr>
+        <tr>
+          <td>LOAN TERM:</td>
+          <td>1 YEAR</td>
+        </tr>
+        <tr>
+          <td>INTERST RATE:</td>
+          <td>4.00%</td>
+        </tr>
+        <tr>
+          <td>TOTAL INTEREST PAYABLE:</td>
+          <td>$120.00</td>
+        </tr>
+      </table>
+      <p>There is no early repayment fees if the loan was fully paid back after 3 months.</p>
+      <p>inia neque id mi eleifend egestas. In sagittis lorem sed erat pellentesque porta. In vitae molestie justo, nec egestas lorem. Pellentesque bibendum maximus ipsum vel lobortis. Mauris ornare ligula sed enim varius blandit. Sed condimentum leo sed bibendum</p>
+    </div>
+    <div class="row padding-top-20">
+      <div class="col col-xs-12">
+          <div class="float-left">
+            <mat-checkbox></mat-checkbox>
+          </div>
+          <div class="float-left checkbox-content">
+              <p>I've read and understood details of this contract, and accept the terms and conditions of Smashed Avo Fund's investment loan.</p>
+              <!-- <pre style="color:white">{{ creditScoreResult | json }}</pre> -->
+          </div>
+        </div>
+    </div>
+  </div>
+  <!-- <div class="container" style="position: absolute;bottom: 0;width: 100%;height: 80px;">
+    <div class="row float-right">
+        <button mat-button routerLink="/dash-board/track-savings/overview" routerLinkActive="active">Accept & Continue <mat-icon>arrow_forward</mat-icon></button>
+    </div>
+  </div> -->
+  <div class="container footer">
+    <div class="row float-right">
+        <button mat-button (click)="completeApplication()">Accept & Continue <mat-icon>arrow_forward</mat-icon></button>
+    </div>
+  </div>
+  <div class="img-loading" *ngIf='showLoadingScreen'>
+  </div>
+</div>

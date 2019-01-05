@@ -1,0 +1,64 @@
+<div class="mobile-layout">
+    <div class="container header">
+      <div class="row">
+        <div class="col col-xs-4">
+          <button mat-button routerLink="/step2" routerLinkActive="active" class="back-btn"><mat-icon class="back-btn-icon">arrow_back</mat-icon></button>
+        </div>
+        <div class="col col-xs-4">
+            <mat-icon style="font-size:50px;">chrome_reader_mode</mat-icon>
+        </div>
+        <div class="col col-xs-4">
+          <!-- <mat-icon>arrow_forward</mat-icon> -->
+        </div>
+      </div>
+    </div>
+    <div class="container content">
+      <div class="row">
+        <mat-progress-bar mode="determinate" value="30"></mat-progress-bar>
+      </div>
+      <div class="row padding-top-20">
+        <div class="col col-xs-12">
+          <h1>Who do you currently bank with?</h1>
+          <p>Share your banking information for us to assess your finances</p>
+        </div>
+      </div>
+      <div class="row">
+        <form class="example-form">
+          <mat-form-field class="example-full-width">
+            <input type="text" name="bank" placeholder="Search for your bank" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto" [(ngModel)]='selectedBank'>
+            <mat-autocomplete #auto="matAutocomplete" >
+              <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                {{option}}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+          </form>
+      </div>
+      <div class="row">
+        <div class="logo col col-xs-12">
+          <div class="img-cba {{ selectedBank === 'Common Wealth' ? '' : 'hide'}}"></div>
+          <div class="img-anz {{ selectedBank === 'ANZ' ? '' : 'hide'}}"></div>
+          <div class="img-westpac {{ selectedBank === 'Westpac' ? '' : 'hide'}}"></div>
+          <div class="img-nab  {{ selectedBank === 'NAB' ? '' : 'hide'}}"></div>
+          <div class="img-hsbc  {{ selectedBank === 'HSBC' ? '' : 'hide'}}"></div>
+        </div>
+      </div>
+      <div class="row padding-top-20">
+        <div class="float-left">
+          <mat-checkbox (click)="authorizeAccessToTransactions()"></mat-checkbox>
+        </div>
+        <div class="float-left checkbox-content">
+            <p>I authrorize C2C to access my financial information from the selected banking institutions for credit assessment.</p>
+            <!-- <pre style="color:white">{{ creditScoreResult | json }}</pre> -->
+        </div>
+      </div>
+    </div>
+    <div class="container footer">
+      <div class="row float-right">
+          <button mat-button (click)="retrieveCreditRating()">Next <mat-icon>arrow_forward</mat-icon></button>
+      </div>
+    </div>
+    <div class="img-loading" *ngIf='showLoadingScreen'>
+    </div>
+  </div>
+

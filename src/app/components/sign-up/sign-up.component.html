@@ -1,0 +1,40 @@
+<div class="mobile-layout">
+  <div class="container header">
+    <div class="row">
+      <div class="col col-xs-4">
+        <!-- <mat-icon>arrow_back</mat-icon> -->
+      </div>
+      <div class="col col-xs-4">
+        <div class="hsbc-logo"></div>
+      </div>
+      <div class="col col-xs-4">
+        <!-- <mat-icon>arrow_forward</mat-icon> -->
+      </div>
+    </div>
+  </div>
+  <div class="container content">
+
+    <div class="row">
+      <ngu-carousel #myCarousel class="carousel-container" [inputs]="carouselConfig" [dataSource]="carouselItems">
+        <ngu-tile *nguCarouselDef="let item;">
+          <div class="tile row">
+            <h1>{{ item.title }}</h1>
+            <!-- <mat-icon>home</mat-icon>
+            <mat-icon>chrome_reader_mode</mat-icon> -->
+            <p>{{ item.subTitle}}</p>
+          </div>
+        </ngu-tile>
+        <ul class="myPoint" NguCarouselPoint>
+          <li *ngFor="let j of myCarousel.pointNumbers; let j = index" [class.active]="j==myCarousel.activePoint" (click)="myCarousel.moveTo(j)"></li>
+        </ul>
+      </ngu-carousel>
+    </div>
+    <div class="row">
+      <button mat-button routerLink="/create-account" routerLinkActive="active">Sign up</button>
+      <button mat-button routerLink="/login">Login</button>
+    </div>
+  </div>
+  <div class="container footer">
+  </div>
+</div>
+
